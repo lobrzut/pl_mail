@@ -1,0 +1,17 @@
+plMail — fork notice
+
+This program is a modified version of plMail.
+
+Original work: https://github.com/karatektus/pl_mail
+Copyright of the original work remains with its authors.
+This fork does not claim that copyright.
+
+License: GNU Affero General Public License, version 3.
+The full license text is the file LICENSE. It is the upstream license text and it has not been changed.
+The modification is released under that same license. There is no additional grant and no proprietary relicensing.
+
+Modification: 2026-10-20
+What changed: a Polish (pl) interface locale was added (AppLocale, enabled locales, and the pl translation catalogues).
+Source code of this modified version: https://github.com/lobrzut/pl_mail
+
+If you run this modified version as a network service, the GNU AGPL requires that users of that service can obtain this source code.

@@ -7,6 +7,9 @@ namespace App\Domain\Enum;
 /**
  * Interface locales plMail ships translations for.
  *
+ * The Polish case was added in the lobrzut fork on 2026-10-20.
+ * Original work: https://github.com/karatektus/pl_mail — see NOTICE.
+ *
  * The case values must match the suffixes of translations/messages.*.yaml and
  * the framework.enabled_locales list in config/packages/translation.yaml.
  */
@@ -15,6 +18,7 @@ enum AppLocale: string
     case English = 'en';
     case German = 'de';
     case French = 'fr';
+    case Polish = 'pl';
     case Pirate = 'en_PI';
 
     /**
@@ -26,6 +30,7 @@ enum AppLocale: string
             self::English => 'English',
             self::German => 'Deutsch',
             self::French => 'Français',
+            self::Polish => 'Polski',
             self::Pirate => 'Pirate English',
         };
     }
@@ -39,6 +44,7 @@ enum AppLocale: string
             self::English => '🇬🇧',
             self::German => '🇩🇪',
             self::French => '🇫🇷',
+            self::Polish => '🇵🇱',
             self::Pirate => '🏴‍☠️',
         };
     }

@@ -1,0 +1,39 @@
+# Komunikaty walidacji. Symfony tłumaczy je w domenie `validators`,
+# nie `messages` — klucz w messages.*.yaml wyświetla się na surowo.
+# Zobacz validators.en.yaml.
+account.host_invalid: Podaj samą nazwę hosta albo adres IP — bez ukośników, znaków zapytania i @.
+admin.ai.keep_alive_invalid: Podaj czas w postaci 5m, 30m albo 4h, samą liczbę sekund, albo -1, żeby model został załadowany na stałe — zostaw puste, żeby użyć ustawienia hosta.
+admin.integrations.client_id_missing: Podaj identyfikator klienta, który pasuje do tego sekretu.
+admin.integrations.secret_missing: Podaj też sekret klienta — sam identyfikator nikogo nie zaloguje.
+admin.sso.error.client_id_missing: 'Identyfikator klienta jest potrzebny razem z wystawcą i sekretem. Wszystkie trzy albo żadne.'
+admin.sso.error.issuer_missing: 'Wystawca jest potrzebny razem z identyfikatorem klienta i sekretem. Wszystkie trzy albo żadne.'
+admin.sso.error.issuer_not_https: 'Wystawca musi zaczynać się od https://. plMail ufa dostawcy dzięki połączeniu TLS.'
+admin.sso.error.password_login_needs_own_sso: 'Zaloguj się przez dostawcę przynajmniej raz, zanim ustawisz go jako jedyną drogę wejścia, inaczej odcinasz sobie dostęp.'
+admin.sso.error.password_login_needs_provider: 'Najpierw zapisz całego dostawcę (wystawca, identyfikator klienta i sekret), zanim logowanie jednokrotne będzie jedyną drogą wejścia.'
+admin.sso.error.secret_missing: 'Sekret klienta jest potrzebny razem z wystawcą i identyfikatorem klienta. Wszystkie trzy albo żadne.'
+admin.users.password_too_short: Użyj co najmniej {{ limit }} znaków — to hasło jest wybierane dla kogoś innego.
+alias.invalid: Podaj prawidłowy adres e-mail.
+app_password.name_required: Nadaj hasłu aplikacji nazwę, żebyś później je rozpoznał.
+caldav.address_required: Podaj adres serwera CalDAV — bez niego plMail nie ma o co pytać.
+caldav.credential_required: Podaj hasło aplikacji albo zaznacz pole, żeby użyć hasła zapisanego przy koncie pocztowym.
+caldav.reuse_account_required: Wybierz, którego konta pocztowego hasła użyć, albo odznacz pole i wpisz hasło.
+caldav.username_required: Podaj nazwę użytkownika, pod którą zna cię serwer CalDAV.
+calendar.name_required: Nadaj kalendarzowi nazwę — po niej odróżnisz go od pozostałych.
+compose.recipient_invalid: "„{{ address }}” nie jest prawidłowym adresem e-mail."
+compose.recipient_required: Dodaj co najmniej jednego odbiorcę, zanim wyślesz.
+integration.name_taken: Masz już połączenie z tą usługą o nazwie {{ value }}. Nadaj temu inną — na przykład dom i praca.
+settings.password.current_required: Podaj obecne hasło — to ono powstrzymuje kogoś przy odblokowanym ekranie przed zmianą.
+settings.password.current_wrong: To nie jest twoje obecne hasło.
+settings.password.mismatch: Dwa nowe hasła nie są takie same.
+settings.password.too_short: Użyj co najmniej {{ limit }} znaków.
+setup.install.password_mismatch: Dwa hasła nie są takie same.
+setup.install.password_too_short: Użyj co najmniej {{ limit }} znaków. To konto nie ma resetowania hasła.
+user.email_taken: Ktoś już używa tego adresu. Każdy adres na tej instalacji należy do dokładnie jednej osoby.
+admin.ai.field.base_url_invalid: 'Adres musi zaczynać się od http:// albo https://.'
+profile.avatar_wrong_type: 'Użyj obrazu PNG, JPEG, GIF albo WebP.'
+admin.ai.headers.malformed: 'Każdy nagłówek zapisz w osobnej linii jako Nazwa: wartość.'
+admin.ai.headers.name: 'Nazwa nagłówka może zawierać tylko litery, cyfry i łączniki i nie może być pusta.'
+admin.ai.headers.value: 'Wartość nagłówka nie może być pusta, nie może zawierać końca linii ani innych znaków sterujących i może mieć co najwyżej 4096 znaków.'
+admin.ai.headers.reserved: 'Jeden z tych nagłówków ustawia sam plMail i nie można go nadpisać: Host, Content-Type, Content-Length, Connection i podobne.'
+admin.ai.headers.duplicate: 'Ten sam nagłówek jest podany dwa razy.'
+admin.ai.headers.too_many: 'Co najwyżej %max% dodatkowych nagłówków.'

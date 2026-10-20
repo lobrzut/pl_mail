@@ -1,0 +1,19 @@
+# Błędy logowania, w domenie, w której rozwiązuje je Symfony.
+#
+# Zobacz security.en.yaml: strona logowania tłumaczy komunikat w domenie
+# `security`, nie w `messages` — klucz położony tam pojawia się na ekranie na surowo.
+account.deactivated: Administrator wyłączył twoje konto. Poproś, żeby włączył je z powrotem — nic twojego nie zostało usunięte.
+account.removed: To konto zostało usunięte i nie można się nim zalogować.
+
+# Logowanie jednokrotne przez dostawcę OpenID Connect, rzucane przez
+# App\Security\OidcAuthenticator. Zobacz security.en.yaml.
+oidc.unavailable: Logowanie jednokrotne teraz nie działa. Zaloguj się hasłem albo poproś administratora, żeby sprawdził logi.
+oidc.denied: Dostawca logowania nie wpuścił cię do plMail.
+oidc.failed: Logowania przez dostawcę nie udało się dokończyć. Spróbuj jeszcze raz.
+oidc.no_email: Dostawca logowania nie podał plMail twojego adresu e-mail, więc nie ma konta, na które można cię zalogować.
+oidc.email_unverified: Dostawca logowania nie potwierdził twojego adresu e-mail, więc plMail nie powiąże go z kontem. Zwróć się do administratora.
+oidc.ambiguous: Jest tu więcej niż jedno konto z twoim adresem e-mail. Poproś administratora, żeby to uporządkował.
+oidc.no_account: Nie ma jeszcze dla ciebie konta plMail. Poproś administratora, żeby założył je na twój adres e-mail.
+oidc.linked_elsewhere: Konto z twoim adresem e-mail jest już powiązane z kimś innym u dostawcy logowania. Zwróć się do administratora.
+oidc.unavailable_sso_only: 'Logowanie jednokrotne teraz nie działa. Spróbuj za chwilę albo poproś administratora, żeby sprawdził logi.'
+login.password_disabled: 'Logowanie hasłem jest na tej instalacji wyłączone. Użyj logowania jednokrotnego.'

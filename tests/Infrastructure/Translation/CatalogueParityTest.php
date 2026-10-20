@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 use Symfony\Component\Yaml\Yaml;
 
 /**
- * Every key in the English catalogue exists in German, French and pirate English.
+ * Every key in the English catalogue exists in German, French, Polish and pirate English.
  *
  * A missing key is not an error anywhere Symfony looks: the translator falls
  * back to `en`, the page renders, and the only symptom is an English sentence
@@ -28,6 +28,7 @@ final class CatalogueParityTest extends TestCase
     {
         yield 'de' => ['de'];
         yield 'fr' => ['fr'];
+        yield 'pl' => ['pl'];
         yield 'en_PI' => ['en_PI'];
     }
 

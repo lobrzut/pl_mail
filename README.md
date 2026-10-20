@@ -1,5 +1,7 @@
 # plMail
 
+**Fork of [karatektus/pl_mail](https://github.com/karatektus/pl_mail).** The original program and its copyright remain with the upstream authors. This repository is a modified version, published on 2026-10-20, and it is not endorsed by the upstream author. The modification adds a Polish (`pl`) interface. Source code of this modified version: <https://github.com/lobrzut/pl_mail>. License: GNU Affero General Public License v3.0, the same license as upstream, in the unmodified `LICENSE` file. See `NOTICE`.
+
 Self-hosted mail with a calendar beside it. Connect the mailboxes you already have — IMAP, Gmail,
 Outlook — and read them side by side in one inbox, on a server you own.
 
@@ -80,7 +82,7 @@ provider doesn't.
   with what changed since the one they run.
 - **Yours** — two-factor auth, sign-in through Authentik, Keycloak or any other OpenID Connect
   provider, per-app JMAP passwords, 41 themes, ten icons for the tab and the phone's home screen,
-  English, German, French and Pirate.
+  English, German, French, Polish and Pirate.
 
 ## A look around
 
@@ -105,10 +107,12 @@ generated on first start, and the public address is asked for on the setup scree
 ### Docker
 
 ```bash
-git clone https://github.com/karatektus/pl_mail.git
+git clone https://github.com/lobrzut/pl_mail.git
 cd pl_mail
 docker compose up -d
 ```
+
+`compose.yaml` still starts the upstream image `ghcr.io/karatektus/pl_mail`. That image does not contain this fork's Polish locale. To run the modified version, build the image from this source (`docker build --target frankenphp_prod -t pl_mail:fork .`) and point the stack at that tag. The upstream project remains <https://github.com/karatektus/pl_mail>.
 
 Open [https://localhost](https://localhost) and create your account. From another machine, open
 `https://` and the server's address instead; the browser warns about the self-signed certificate
