@@ -34,7 +34,7 @@ final class LogoLinkedTest extends WebTestCase
         // fresh account holds — put the seed user back rather than leaking one
         // test's choices into the next suite.
         if (null !== $user = $this->find()) {
-            $user->appearance->theme        = Theme::Paper;
+            $user->appearance->theme        = Theme::Pomnia;
             $user->appearance->logoMotif    = LogoMotif::DEFAULT;
             $user->appearance->logoOriginal = true;
             $user->appearance->logoStyle    = LogoStyle::DEFAULT;

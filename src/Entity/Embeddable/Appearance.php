@@ -19,8 +19,8 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Embeddable]
 final class Appearance
 {
-    /** Paper's clay, since Paper is what an account starts on — see $theme. */
-    public const string DEFAULT_ACCENT = '#7d6b4f';
+    /** Pomnia mint. An account starts on the Pomnia theme — see $theme. */
+    public const string DEFAULT_ACCENT = '#34d399';
 
     /**
      * The clamps the numeric setters below apply, named rather than inlined
@@ -84,14 +84,12 @@ final class Appearance
     public const array RANGE_FONT_SCALE = ['min' => 0.875, 'max' => 1.25];
 
     /**
-     * Paper rather than System. A new install should look like something
-     * somebody chose, and "follow the OS" resolves to whichever of plain white
-     * or plain dark the machine happens to prefer — the two least considered
-     * palettes here. Anyone who wants the OS to decide can still pick System;
-     * this only changes what an account starts as.
+     * Pomnia rather than Paper. This fork starts on the Twardowsky palette:
+     * near-black green, mint accent, teal ink. Anyone can still pick another
+     * theme; this only changes what an account starts as.
      */
-    #[ORM\Column(type: 'string', length: 16, enumType: Theme::class, options: ['default' => 'paper'])]
-    public Theme $theme = Theme::Paper;
+    #[ORM\Column(type: 'string', length: 16, enumType: Theme::class, options: ['default' => 'pomnia'])]
+    public Theme $theme = Theme::Pomnia;
 
     #[ORM\Column(type: 'string', length: 16, enumType: Layout::class, options: ['default' => 'flat'])]
     public Layout $layout = Layout::Flat;
@@ -405,8 +403,8 @@ final class Appearance
 
     /* ── Typography ───────────────────────────────────────────────────────── */
 
-    #[ORM\Column(type: 'string', length: 16, enumType: FontFamily::class, options: ['default' => 'system'])]
-    public FontFamily $fontFamily = FontFamily::System;
+    #[ORM\Column(type: 'string', length: 16, enumType: FontFamily::class, options: ['default' => 'monospace'])]
+    public FontFamily $fontFamily = FontFamily::Monospace;
 
     #[ORM\Column(type: 'float', options: ['default' => 1.0])]
     public float $fontScale = 1.0 {

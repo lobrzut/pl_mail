@@ -13,6 +13,7 @@ enum Theme: string
     case Nord   = 'nord';
     case Dusk   = 'dusk';
     case Solar  = 'solar';
+    case Pomnia = 'pomnia';
 
     // ── One theme per logo colourway ──────────────────────────────────────
     // Every LogoStyle value is also a Theme value, verbatim — that identity
@@ -67,7 +68,7 @@ enum Theme: string
     public function isDark(): bool
     {
         return match ($this) {
-            self::Dark, self::Nord, self::Dusk => true,
+            self::Dark, self::Nord, self::Dusk, self::Pomnia => true,
             // The seven logo themes whose palette blocks are dark palettes —
             // kept in step with the generated blocks in app.css by the
             // generator script referenced there.
@@ -142,6 +143,7 @@ enum Theme: string
             self::Nord   => ['#2e3440', '#eceff4', '#88c0d0'],
             self::Dusk   => ['#1e1b2e', '#ede9fe', '#a78bfa'],
             self::Solar  => ['#fdf6e3', '#586e75', '#b58900'],
+            self::Pomnia => ['#0a110d', '#5eead4', '#34d399'],
 
             self::Ink => ['#211e1a', '#8a847a', '#e8e2d9'],
             self::MidnightGold => ['#1a2333', '#94a3b8', '#d97706'],

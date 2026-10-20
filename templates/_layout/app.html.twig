@@ -124,7 +124,7 @@
        nonce and all, while the policy stays the first page's. Which is why
        nothing in a body is an inline script — behaviour lives in controllers. #}
     <meta name="csp-nonce" content="{{ csp_nonce() }}">
-    <meta name="theme-color" content="#a21caf">
+    <meta name="theme-color" content="#060a08">
 
     {# Turbo's snapshot policy for THIS page. Empty by default — most pages are
        perfectly happy being restored from cache on a back navigation. The mail
@@ -150,7 +150,7 @@
         // user picked instead of the defaults.
         (function () {
             const root = document.documentElement;
-            const key = 'plmail:appearance';
+            const key = 'plmail:appearance:pomnia';
 
             try {
                 {% if app.user %}

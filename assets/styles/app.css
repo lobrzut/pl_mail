@@ -736,6 +736,64 @@
     --rgb-sheet-info:        27 106 161;
 }
 
+/* Pomnia — the Twardowsky palette. Near-black green ground, mint accent,
+   teal ink. The reading sheet stays light: mail was written for a light page. */
+:root[data-theme="pomnia"] {
+    color-scheme: dark;
+
+    --rgb-surface:      10  17  13;
+    --rgb-border:       26  51  40;
+    --rgb-line:         45  90  72;
+    --rgb-raised:       94 234 212;
+    --rgb-sunken:        6  10   8;
+    --rgb-shadow:        0   0   0;
+
+    --rgb-ink:          94 234 212;
+    --rgb-ink-soft:    140 220 206;
+    --rgb-ink-muted:    90 190 176;
+    --rgb-ink-faint:    70 160 148;
+
+    --rgb-accent:       52 211 153;
+    --rgb-accent-ink:    4  32  24;
+
+    --rgb-field:         6  10   8;
+    --rgb-field-border: 26  51  40;
+
+    --rgb-danger:      248 113 113;
+    --rgb-warning:     251 191  36;
+    --rgb-success:      80 250 123;
+    --rgb-info:         94 234 212;
+
+    --rgb-inverse:     224 250 244;
+    --rgb-inverse-ink:   6  10   8;
+
+    --border-alpha:       1;
+    --line-alpha:         0.55;
+    --raised-alpha:       0.06;
+    --hover-alpha:        0.08;
+    --shadow-alpha:       0.45;
+    --sunken-alpha:       1;
+
+    --unread-tint-alpha:  0.05;
+    --field-alpha:        1;
+    --field-border-alpha: 1;
+    --danger-soft-alpha:  0.14;
+    --info-soft-alpha:    0.12;
+
+    --app-bg: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(94, 234, 212, 0.14), #060a08 55%);
+
+    --rgb-sheet:            240 253 250;
+    --rgb-sheet-ink:         15  40  32;
+    --rgb-sheet-ink-soft:    30  64  54;
+    --rgb-sheet-ink-muted:   55  90  80;
+    --rgb-sheet-ink-faint:   80 110 100;
+    --rgb-sheet-link:        13 116 102;
+    --rgb-sheet-danger:     185  28  28;
+    --rgb-sheet-warning:    146  64  14;
+    --rgb-sheet-success:     21 128  61;
+    --rgb-sheet-info:        15 118 110;
+}
+
 /* ═══ Logo-colourway themes (generated) ═════════════════════════════════════
    One theme per LogoStyle, each with a palette of its own rather than Paper
    plus a tinted accent. Seven are proper dark themes (ink, midnight-gold,

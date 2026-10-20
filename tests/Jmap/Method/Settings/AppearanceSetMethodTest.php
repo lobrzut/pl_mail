@@ -110,7 +110,7 @@ final class AppearanceSetMethodTest extends JmapTestCase
             self::assertStringContainsString($accepted, $error['description']);
         }
 
-        self::assertSame(Theme::Paper->value, $this->read()['theme'], 'the refused value must not have been applied');
+        self::assertSame(Theme::Pomnia->value, $this->read()['theme'], 'the refused value must not have been applied');
     }
 
     public function testAnUnknownDensityIsRefusedNamingTheAcceptedValues(): void
@@ -159,7 +159,7 @@ final class AppearanceSetMethodTest extends JmapTestCase
     {
         $this->updateError(['theme' => 'dark', 'density' => 'roomy']);
 
-        self::assertSame(Theme::Paper->value, $this->read()['theme']);
+        self::assertSame(Theme::Pomnia->value, $this->read()['theme']);
     }
 
     /**
@@ -318,7 +318,7 @@ final class AppearanceSetMethodTest extends JmapTestCase
 
         self::assertSame('singleton', $result['notCreated']['c1']['type']);
         self::assertSame('singleton', $result['notDestroyed'][AppearanceMapper::SINGLETON_ID]['type']);
-        self::assertSame(Theme::Paper->value, $this->read()['theme']);
+        self::assertSame(Theme::Pomnia->value, $this->read()['theme']);
     }
 
     public function testAnyOtherIdIsNotFound(): void
@@ -358,7 +358,7 @@ final class AppearanceSetMethodTest extends JmapTestCase
         $this->em->flush();
 
         self::assertSame(Theme::Dark, $this->user->appearance->theme);
-        self::assertSame(Theme::Paper, $stranger->appearance->theme);
+        self::assertSame(Theme::Pomnia, $stranger->appearance->theme);
         self::assertSame(Appearance::DEFAULT_ACCENT, $stranger->appearance->accent);
 
         $result = $this->method->handle(
